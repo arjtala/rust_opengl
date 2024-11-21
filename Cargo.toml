@@ -1,0 +1,20 @@
+[package]
+name = "rust_opengl"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+gl = { path = "lib/gl" }
+thiserror = "2.0.3"
+walkdir = "2.5.0"
+render_gl_derive = { path = "render_gl_derive" }
+
+[dependencies.sdl2]
+version = "0.37.0"
+features = ["bundled", "static-link"]
+
+[features]
+gl_debug = ["gl/debug"]
+
+[build-dependencies]
+walkdir = "2.5.0"
